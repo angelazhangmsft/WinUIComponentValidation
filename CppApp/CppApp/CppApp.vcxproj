@@ -103,7 +103,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <Manifest Include="app.manifest" />
-    <Manifest Include="CppApp.exe.manifest" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

@@ -7,7 +7,7 @@ using Microsoft.UI.Xaml.Controls;
 
 namespace WinUIComponentValidation
 {
-    public sealed class TestButtons
+    public static class TestButtons
     {
         public static CustomButton GetCustomButton()
         {
@@ -16,9 +16,11 @@ namespace WinUIComponentValidation
 
         public static Button GetRegularButton()
         {
-            var b = new Button();
-            b.Content = "Regular Button";
-            return b;
+            Button button = new Button
+            {
+                Content = "Button"
+            };
+            return button;
         }
     }
 }

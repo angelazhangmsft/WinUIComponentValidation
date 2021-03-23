@@ -13,7 +13,7 @@ namespace winrt::CppApp::implementation
     {
         MainWindow();
 
-        WinUIComponentValidation::TestButtons testButtons;
+        //WinUIComponentValidation::TestButtons testButtons;
         WinUIComponentValidation::CustomButton customButton;
         Microsoft::UI::Xaml::Controls::Button regularButton;
 
@@ -23,7 +23,9 @@ namespace winrt::CppApp::implementation
         int32_t MyProperty();
         void MyProperty(int32_t value);
 
-        void myButton_Click(Windows::Foundation::IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
+        void releaseRegularButton_Click(Windows::Foundation::IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
+        void releaseCustomButton_Click(Windows::Foundation::IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
+
     };
 }
 
