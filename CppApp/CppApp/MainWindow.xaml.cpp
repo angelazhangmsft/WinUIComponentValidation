@@ -19,13 +19,8 @@ namespace winrt::CppApp::implementation
     {
         InitializeComponent();
 
-        
-        
-        regularButton.MinWidth(160); regularButton.MinHeight(30); 
-
-
-        myStackPanel().Children().Append(customButton);
-        myStackPanel().Children().Append(regularButton);
+        /*myStackPanel().Children().Append(customButton);
+        myStackPanel().Children().Append(regularButton);*/
     }
 
     void MainWindow::acquireRegularButton_Click(IInspectable const& sender, RoutedEventArgs const& args)
@@ -58,6 +53,12 @@ namespace winrt::CppApp::implementation
         ReleaseCustomButton();
     }
 
+    void MainWindow::checkAliveReferences_Click(IInspectable const&, RoutedEventArgs const&)
+    {
+        hstring result = TestButtons::CheckIfReferencesAlive();
+        checkAliveReferences().Content(box_value(result));
+    }
+
     int32_t MainWindow::MyProperty()
     {
         throw hresult_not_implemented();
@@ -68,3 +69,4 @@ namespace winrt::CppApp::implementation
         throw hresult_not_implemented();
     }
 }
+

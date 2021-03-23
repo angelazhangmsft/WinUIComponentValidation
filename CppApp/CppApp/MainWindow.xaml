@@ -14,6 +14,8 @@
         
         <Button x:Name="releaseCustomButton" Background="Red" Click="releaseCustomButton_Click">Release Custom Button</Button>
         <Button x:Name="releaseRegularButton" Background="Red" Click="releaseRegularButton_Click">Release Regular Button</Button>
+
+        <Button x:Name="checkAliveReferences" Background="Gray" Click="checkAliveReferences_Click">Check Alive References</Button>
        
     </StackPanel>
     
