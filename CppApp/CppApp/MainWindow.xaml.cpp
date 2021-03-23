@@ -19,13 +19,23 @@ namespace winrt::CppApp::implementation
     {
         InitializeComponent();
 
-        customButton = TestButtons::GetCustomButton();
-        regularButton = TestButtons::GetRegularButton();
+        
+        
         regularButton.MinWidth(160); regularButton.MinHeight(30); 
 
 
         myStackPanel().Children().Append(customButton);
         myStackPanel().Children().Append(regularButton);
+    }
+
+    void MainWindow::acquireRegularButton_Click(IInspectable const& sender, RoutedEventArgs const& args)
+    {
+        regularButton = TestButtons::GetRegularButton();
+    }
+
+    void MainWindow::acquireCustomButton_Click(IInspectable const&, RoutedEventArgs const&)
+    {
+        customButton = TestButtons::GetCustomButton();
     }
 
     void MainWindow::ReleaseRegularButton()

@@ -8,6 +8,10 @@
     mc:Ignorable="d">
 
     <StackPanel x:Name="myStackPanel" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+        <Button x:Name="acquireCustomButton" Background="Green" Click="acquireCustomButton_Click">Acquire Custom Button</Button>
+        <Button x:Name="acquireRegularButton" Background="Green" Click="acquireRegularButton_Click">Acquire Regular Button</Button>
+        
         <Button x:Name="releaseCustomButton" Background="Red" Click="releaseCustomButton_Click">Release Custom Button</Button>
         <Button x:Name="releaseRegularButton" Background="Red" Click="releaseRegularButton_Click">Release Regular Button</Button>
        
