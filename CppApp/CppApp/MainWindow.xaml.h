@@ -13,6 +13,10 @@ namespace winrt::CppApp::implementation
     {
         MainWindow();
 
+        WinUIComponentValidation::TestButtons testButtons;
+        WinUIComponentValidation::CustomButton customButton;
+        Microsoft::UI::Xaml::Controls::Button regularButton;
+
         void ReleaseRegularButton();
         void ReleaseCustomButton();
 

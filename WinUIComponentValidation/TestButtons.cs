@@ -16,7 +16,9 @@ namespace WinUIComponentValidation
 
         public static Button GetRegularButton()
         {
-            return new Button();
+            var b = new Button();
+            b.Content = "Regular Button";
+            return b;
         }
     }
 }

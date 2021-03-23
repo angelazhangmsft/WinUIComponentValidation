@@ -14,9 +14,6 @@ using namespace Microsoft::UI::Xaml::Controls;
 
 namespace winrt::CppApp::implementation
 {
-    TestButtons testButtons;
-    CustomButton customButton;
-    Button regularButton;
 
     MainWindow::MainWindow()
     {
@@ -25,16 +22,19 @@ namespace winrt::CppApp::implementation
         testButtons = TestButtons();
         customButton = testButtons.GetCustomButton();
         regularButton = testButtons.GetRegularButton();
+
+        myStackPanel().Children().Append(customButton);
+        myStackPanel().Children().Append(regularButton);
     }
 
     void MainWindow::ReleaseRegularButton()
     {
-        //regularButton = NULL;
+        regularButton = NULL;
     }
 
     void MainWindow::ReleaseCustomButton()
     {
-        //customButton = NULL;
+        customButton = NULL;
     }
 
     int32_t MainWindow::MyProperty()
