@@ -53,11 +53,23 @@ namespace winrt::CppApp::implementation
         ReleaseCustomButton();
     }
 
-    void MainWindow::checkAliveReferences_Click(IInspectable const&, RoutedEventArgs const&)
+    void MainWindow::isAliveRegularButton_Click(IInspectable const& sender, RoutedEventArgs const& args)
+    {
+        bool result = TestButtons::isAliveRegularButton();
+        aliveRegularButton().Content(box_value(to_hstring(result)));
+    }
+
+    void MainWindow::isAliveCustomButton_Click(IInspectable const&, RoutedEventArgs const&)
+    {
+        bool result = TestButtons::isAliveCustomButton();
+        aliveCustomButton().Content(box_value(to_hstring(result)));
+    }
+
+    /*void MainWindow::checkAliveReferences_Click(IInspectable const&, RoutedEventArgs const&)
     {
         hstring result = TestButtons::CheckIfReferencesAlive();
         checkAliveReferences().Content(box_value(result));
-    }
+    }*/
 
     int32_t MainWindow::MyProperty()
     {
